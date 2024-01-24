@@ -1,4 +1,5 @@
 import dataInstance from "../model/formModel.js";
+import cors from "micro-cors";
 
 export const collateData = async (req, res) => {
     try {
@@ -38,7 +39,7 @@ export const collateData = async (req, res) => {
     }
 }
 
-export const fetchFormData = async (req, res) => {
+export const fetchFormData = cors(async (req, res) => {
     try {
         const formData = await dataInstance.find();
 
@@ -58,4 +59,4 @@ export const fetchFormData = async (req, res) => {
     });
         
     }
-}
+})
