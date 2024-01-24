@@ -39,7 +39,7 @@ export const collateData = async (req, res) => {
     }
 }
 
-export const fetchFormData = cors(async (req, res) => {
+export const fetchFormData = async (req, res) => {
     try {
         const formData = await dataInstance.find();
 
@@ -59,4 +59,4 @@ export const fetchFormData = cors(async (req, res) => {
     });
         
     }
-})
+}
